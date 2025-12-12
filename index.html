@@ -21,7 +21,10 @@
     <title>ZA Solutions - Data Intelligence & Operations</title>
     <link rel="icon" type="image/png" href="./public/fav.png" />
     <link rel="shortcut icon" type="image/png" href="./public/fav.png" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap");
@@ -35,22 +38,23 @@
         scroll-behavior: smooth;
       }
 
-     body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #ffffff;
-  background: linear-gradient(
-    135deg,
-    #0a0e27 0%,
-    #1a1f3a 25%,
-    #0f1a3d 50%,
-    #1e1b4b 75%,
-    #0a0e27 100%
-  );
-  background-size: 400% 400%;
-  animation: gradientMove 15s ease infinite;
-  line-height: 1.6;
-  min-height: 100vh;
-}
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        color: #ffffff;
+        background: linear-gradient(
+          135deg,
+          #0a0e27 0%,
+          #1a1f3a 25%,
+          #0f1a3d 50%,
+          #1e1b4b 75%,
+          #0a0e27 100%
+        );
+        background-size: 400% 400%;
+        animation: gradientMove 15s ease infinite;
+        line-height: 1.6;
+        min-height: 100vh;
+      }
 
       h1,
       h2,
@@ -407,38 +411,33 @@
         }
       }
       /* Tools & Technologies Section */
-     /* Tools & Technologies Section */
-.tools-section {
-  background: linear-gradient(
-    135deg,
-    #0f1629 0%,
-    #0a0e27 50%,
-    #1a1f3a 100%
-  );
-  position: relative;
-  overflow: hidden;
-}
+      /* Tools & Technologies Section */
+      .tools-section {
+        background: transparent;
+        position: relative;
+        overflow: hidden;
+      }
 
-/* Tools Grid with row limitation */
-.tools-grid {
-  position: relative;
-}
+      /* Tools Grid with row limitation */
+      .tools-grid {
+        position: relative;
+      }
 
-.tools-grid:not(.expanded) .tool-card:nth-child(n+13) {
-  display: none;
-}
+      .tools-grid:not(.expanded) .tool-card:nth-child(n + 13) {
+        display: none;
+      }
 
-@media (max-width: 1024px) {
-  .tools-grid:not(.expanded) .tool-card:nth-child(n+7) {
-    display: none;
-  }
-}
+      @media (max-width: 1024px) {
+        .tools-grid:not(.expanded) .tool-card:nth-child(n + 7) {
+          display: none;
+        }
+      }
 
-@media (max-width: 768px) {
-  .tools-grid:not(.expanded) .tool-card:nth-child(n+5) {
-    display: none;
-  }
-}
+      @media (max-width: 768px) {
+        .tools-grid:not(.expanded) .tool-card:nth-child(n + 5) {
+          display: none;
+        }
+      }
 
       .tools-section::before {
         content: "";
@@ -616,14 +615,38 @@
           rgba(10, 14, 39, 0.8) 100%
         );
         border: 1px solid rgba(0, 194, 255, 0.15);
-        border-radius: 1.25rem;
-        padding: 2rem;
+        border-radius: 1rem;
+        padding: 1.5rem; /* Reduced from 2rem */
         transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
         position: relative;
         overflow: hidden;
         display: flex;
         flex-direction: column;
         height: 100%;
+        min-height: 320px; /* Added minimum height */
+      }
+
+      .icon-circle {
+        width: 48px; /* Reduced from 56px */
+        height: 48px;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 194, 255, 0.2) 0%,
+          rgba(168, 85, 247, 0.2) 100%
+        );
+        border-radius: 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+
+      .icon-circle svg {
+        width: 20px; /* Reduced from 24px */
+        height: 20px;
+        color: #00c2ff;
+        stroke-width: 1.5;
       }
 
       .service-card::before {
@@ -819,8 +842,8 @@
       .service-card:hover .stat-badge {
         animation: floatBadge 2s ease-in-out infinite;
       }
-
-      .team-card {
+      /* Compact Team Cards */
+      .team-card-compact {
         background: linear-gradient(
           135deg,
           rgba(20, 30, 60, 0.6) 0%,
@@ -829,32 +852,198 @@
         border: 1px solid rgba(0, 194, 255, 0.15);
         border-radius: 1rem;
         padding: 2rem;
-        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-        height: 100%;
+        text-align: center;
+        transition: all 0.3s ease;
       }
 
-      .team-card:hover {
+      .team-card-compact:hover {
         border-color: rgba(0, 194, 255, 0.4);
+        transform: translateY(-8px);
         box-shadow: 0 16px 32px rgba(0, 194, 255, 0.15);
       }
 
-      .icon-circle {
-        width: 56px;
-        height: 56px;
+      .team-avatar {
+        width: 120px;
+        height: 120px;
         background: linear-gradient(
           135deg,
           rgba(0, 194, 255, 0.2) 0%,
           rgba(168, 85, 247, 0.2) 100%
         );
-        border-radius: 0.75rem;
+        border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-shrink: 0;
-        transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        will-change: transform, background;
+        margin: 0 auto;
+        border: 3px solid rgba(0, 194, 255, 0.4);
       }
 
+      .team-avatar span {
+        font-size: 3rem;
+      }
+
+      .team-summary {
+        min-height: 3rem;
+        line-height: 1.5;
+      }
+
+      .social-icons a {
+        color: #00c2ff;
+        transition: all 0.3s ease;
+      }
+
+      .social-icons a:hover {
+        transform: scale(1.2);
+        color: #fff;
+      }
+
+      .btn-primary-small {
+        background: linear-gradient(135deg, #00c2ff 0%, #a855f7 100%);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        font-size: 0.875rem;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      /* Modal Styles */
+      .team-modal {
+        position: fixed;
+        inset: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+      }
+
+      .team-modal.hidden {
+        display: none;
+      }
+
+      .modal-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(4px);
+      }
+
+      .modal-content-team {
+        position: relative;
+        background: linear-gradient(
+          135deg,
+          rgba(20, 30, 60, 0.95) 0%,
+          rgba(10, 14, 39, 0.95) 100%
+        );
+        border: 1px solid rgba(0, 194, 255, 0.3);
+        border-radius: 1.5rem;
+        max-width: 1200px;
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        padding: 2.5rem;
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(0, 194, 255, 0.3);
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .modal-close:hover {
+        background: rgba(0, 194, 255, 0.2);
+        transform: rotate(90deg);
+      }
+
+      .modal-header-row {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid rgba(0, 194, 255, 0.2);
+        margin-bottom: 2rem;
+      }
+
+      .modal-avatar-section {
+        flex-shrink: 0;
+      }
+
+      .modal-info-section {
+        flex: 1;
+      }
+
+      .modal-description-row {
+        max-height: 400px;
+        overflow-y: auto;
+        padding-right: 1rem;
+      }
+
+      .modal-description-row::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      .modal-description-row::-webkit-scrollbar-track {
+        background: rgba(0, 194, 255, 0.1);
+        border-radius: 4px;
+      }
+
+      .modal-description-row::-webkit-scrollbar-thumb {
+        background: rgba(0, 194, 255, 0.4);
+        border-radius: 4px;
+      }
+
+      .modal-description-row::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 194, 255, 0.6);
+      }
+
+      .modal-avatar {
+        width: 180px;
+        height: 180px;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 194, 255, 0.2) 0%,
+          rgba(168, 85, 247, 0.2) 100%
+        );
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 4px solid rgba(0, 194, 255, 0.4);
+      }
+
+      .modal-avatar span {
+        font-size: 4rem;
+      }
+
+      .modal-right {
+        border-left: 1px solid rgba(0, 194, 255, 0.2);
+        padding-left: 2rem;
+      }
+
+      @media (max-width: 1024px) {
+        .modal-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .modal-right {
+          border-left: none;
+          border-top: 1px solid rgba(0, 194, 255, 0.2);
+          padding-left: 0;
+          padding-top: 2rem;
+        }
+      }
       .service-card:hover .icon-circle {
         transform: scale(1.12) rotate(6deg);
         background: linear-gradient(
@@ -914,12 +1103,7 @@
       /* Reviews Marquee Styles */
       /* Reviews Marquee Styles */
       .reviews-section {
-        background: linear-gradient(
-          135deg,
-          #0a0e27 0%,
-          #1a1f3a 50%,
-          #0a0e27 100%
-        );
+        background: transparent;
         padding: 4rem 0;
         overflow: hidden;
         position: relative;
@@ -943,26 +1127,28 @@
             transparent 50%
           );
       }
-.swiper {
-  padding: 2rem 3rem;
-}
+      .swiper {
+        padding: 2rem 3rem;
+      }
 
-.swiper-button-next, .swiper-button-prev {
-  color: #00c2ff;
-  background: rgba(0, 194, 255, 0.1);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 194, 255, 0.3);
-}
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #00c2ff;
+        background: rgba(0, 194, 255, 0.1);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 194, 255, 0.3);
+      }
 
-.swiper-button-next:hover, .swiper-button-prev:hover {
-  background: rgba(0, 194, 255, 0.2);
-}
+      .swiper-button-next:hover,
+      .swiper-button-prev:hover {
+        background: rgba(0, 194, 255, 0.2);
+      }
 
-.swiper-pagination-bullet {
-  background: #00c2ff;
-}
+      .swiper-pagination-bullet {
+        background: #00c2ff;
+      }
       .marquee-container {
         position: relative;
         width: 100%;
@@ -989,26 +1175,25 @@
           transform: translateX(-50%);
         }
       }
-
       .review-card {
         flex: 0 0 320px;
         background: linear-gradient(
           135deg,
-          rgba(20, 30, 60, 0.6) 0%,
-          rgba(10, 14, 39, 0.8) 100%
+          rgba(30, 41, 75, 0.85) 0%,
+          rgba(20, 30, 60, 0.95) 100%
         );
-        border: 1px solid rgba(0, 194, 255, 0.15);
-        border-radius: 0.875rem;
-        padding: 1.25rem;
-        transition: all 0.3s ease;
+        border: 1.5px solid rgba(0, 194, 255, 0.25);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
         cursor: pointer;
         position: relative;
         overflow: hidden;
-        height: 240px;
+        height: 280px;
         display: flex;
         flex-direction: column;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
       }
-
       .review-card::before {
         content: "";
         position: absolute;
@@ -1028,26 +1213,22 @@
       .review-card:hover::before {
         left: 100%;
       }
-
       .review-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 16px rgba(0, 194, 255, 0.15);
-        border-color: rgba(0, 194, 255, 0.3);
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 16px 32px rgba(0, 194, 255, 0.3);
+        border-color: rgba(0, 194, 255, 0.6);
         background: linear-gradient(
           135deg,
-          rgba(0, 194, 255, 0.08) 0%,
-          rgba(168, 85, 247, 0.08) 100%
+          rgba(0, 194, 255, 0.15) 0%,
+          rgba(168, 85, 247, 0.15) 100%
         );
       }
-
       .review-top {
         display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 0.75rem;
         gap: 0.75rem;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
       }
-
       .upwork-badge {
         display: inline-flex;
         align-items: center;
@@ -1062,59 +1243,60 @@
         width: fit-content;
         flex-shrink: 0;
       }
-
       .review-date {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.4rem 0.75rem;
+        background: rgba(148, 163, 184, 0.1);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        border-radius: 9999px;
         font-size: 0.7rem;
-        color: #9ca3af;
-        text-align: right;
-        line-height: 1.3;
+        color: #94a3b8;
+        font-weight: 500;
         flex-shrink: 0;
       }
-
-      .review-header {
-        margin-bottom: 0.65rem;
-      }
-
+      /* .review-header {
+        margin-bottom: 0.5rem;
+      } */
       .review-title {
-        font-size: 0.9375rem;
+        font-size: 1rem;
         font-weight: 700;
         color: white;
-        line-height: 1.3;
+        line-height: 1.4;
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
-        min-height: 2.4rem;
+        min-height: 2.8rem;
+        margin-bottom: 0.5rem;
       }
 
       .rating-stars {
         display: flex;
-        gap: 0.2rem;
-        margin-bottom: 0.65rem;
+        gap: 0.3rem;
+        margin-bottom: 0.75rem;
       }
 
       .star {
         color: #fbbf24;
-        font-size: 0.875rem;
+        font-size: 1.125rem;
       }
-
       .review-text {
-        color: #b8c5d6;
-        font-size: 0.8125rem;
-        line-height: 1.55;
+        color: #cbd5e1;
+        font-size: 0.875rem;
+        line-height: 1.6;
         flex-grow: 1;
         overflow: hidden;
         display: -webkit-box;
-        -webkit-line-clamp: 4;
+        -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         text-overflow: ellipsis;
       }
 
       .review-card:hover .review-text {
-        color: #e5e7eb;
+        color: #f1f5f9;
       }
-
       /* Fade effect on edges */
       .marquee-container::before,
       .marquee-container::after {
@@ -1147,188 +1329,188 @@
           animation-duration: 45s;
         }
       }
-footer {
-  background: rgba(10, 14, 39, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  color: white;
-  padding: 3rem 0 0;
-  margin-top: 0;
-  border-top: 1px solid rgba(0, 194, 255, 0.2);
-  position: relative;
-}
+      footer {
+        background: rgba(10, 14, 39, 0.95);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        color: white;
+        padding: 3rem 0 0;
+        margin-top: 0;
+        border-top: 1px solid rgba(0, 194, 255, 0.2);
+        position: relative;
+      }
 
-footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(0, 194, 255, 0.5),
-    rgba(168, 85, 247, 0.5),
-    transparent
-  );
-}
+      footer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(0, 194, 255, 0.5),
+          rgba(168, 85, 247, 0.5),
+          transparent
+        );
+      }
 
-.footer-content {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 3rem;
-  padding: 0 clamp(1.5rem, 4vw, 2.5rem) 2.5rem;
-}
+      .footer-content {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 3rem;
+        padding: 0 clamp(1.5rem, 4vw, 2.5rem) 2.5rem;
+      }
 
-.footer-brand {
-  grid-column: 1;
-}
+      .footer-brand {
+        grid-column: 1;
+      }
 
-.footer-section h4 {
-  font-size: 1rem;
-  margin-bottom: 1.25rem;
-  font-weight: 700;
-  color: white;
-  letter-spacing: 0.02em;
-}
+      .footer-section h4 {
+        font-size: 1rem;
+        margin-bottom: 1.25rem;
+        font-weight: 700;
+        color: white;
+        letter-spacing: 0.02em;
+      }
 
-.footer-section a {
-  color: #b8c5d6;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 0.65rem;
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  position: relative;
-  width: fit-content;
-}
+      .footer-section a {
+        color: #b8c5d6;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 0.65rem;
+        font-size: 0.9375rem;
+        line-height: 1.6;
+        position: relative;
+        width: fit-content;
+      }
 
-.footer-section a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -2px;
-  left: 0;
-  background: linear-gradient(90deg, #00c2ff 0%, #a855f7 100%);
-  transition: width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
+      .footer-section a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background: linear-gradient(90deg, #00c2ff 0%, #a855f7 100%);
+        transition: width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
 
-.footer-section a:hover {
-  color: #00c2ff;
-  transform: translateX(4px);
-}
+      .footer-section a:hover {
+        color: #00c2ff;
+        transform: translateX(4px);
+      }
 
-.footer-section a:hover::after {
-  width: 100%;
-}
+      .footer-section a:hover::after {
+        width: 100%;
+      }
 
-.footer-logo {
-  height: 48px;
-  margin-bottom: 1rem;
-  transition: all 0.3s ease;
-}
+      .footer-logo {
+        height: 48px;
+        margin-bottom: 1rem;
+        transition: all 0.3s ease;
+      }
 
-.footer-logo:hover {
-  transform: scale(1.02);
-  filter: brightness(1.1);
-}
+      .footer-logo:hover {
+        transform: scale(1.02);
+        filter: brightness(1.1);
+      }
 
-.footer-description {
-  color: #b8c5d6;
-  font-size: 0.9375rem;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-  max-width: 350px;
-}
+      .footer-description {
+        color: #b8c5d6;
+        font-size: 0.9375rem;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+        max-width: 350px;
+      }
 
-.footer-social {
-  display: flex;
-  gap: 0.75rem;
-  margin-top: 1.5rem;
-}
+      .footer-social {
+        display: flex;
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+      }
 
-.footer-social a {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: rgba(0, 194, 255, 0.1);
-  border: 1px solid rgba(0, 194, 255, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-  margin-bottom: 0;
-}
+      .footer-social a {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: rgba(0, 194, 255, 0.1);
+        border: 1px solid rgba(0, 194, 255, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        margin-bottom: 0;
+      }
 
-.footer-social a::after {
-  display: none;
-}
+      .footer-social a::after {
+        display: none;
+      }
 
-.footer-social a:hover {
-  background: rgba(0, 194, 255, 0.2);
-  border-color: #00c2ff;
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 194, 255, 0.3);
-}
+      .footer-social a:hover {
+        background: rgba(0, 194, 255, 0.2);
+        border-color: #00c2ff;
+        transform: translateY(-4px);
+        box-shadow: 0 8px 16px rgba(0, 194, 255, 0.3);
+      }
 
-.footer-social a svg {
-  transition: all 0.3s ease;
-}
+      .footer-social a svg {
+        transition: all 0.3s ease;
+      }
 
-.footer-social a:hover svg {
-  filter: drop-shadow(0 0 8px rgba(0, 194, 255, 0.6));
-}
+      .footer-social a:hover svg {
+        filter: drop-shadow(0 0 8px rgba(0, 194, 255, 0.6));
+      }
 
-.footer-divider {
-  border-top: 1px solid rgba(0, 194, 255, 0.15);
-  padding: 1.25rem clamp(1.5rem, 4vw, 2.5rem);
-  font-size: 0.875rem;
-  color: #9ca3af;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.3);
-  margin-top: 0;
-}
+      .footer-divider {
+        border-top: 1px solid rgba(0, 194, 255, 0.15);
+        padding: 1.25rem clamp(1.5rem, 4vw, 2.5rem);
+        font-size: 0.875rem;
+        color: #9ca3af;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.3);
+        margin-top: 0;
+      }
 
-@media (max-width: 768px) {
-  footer {
-    padding: 2.5rem 0 0;
-  }
+      @media (max-width: 768px) {
+        footer {
+          padding: 2.5rem 0 0;
+        }
 
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 0 1.5rem 2rem;
-  }
+        .footer-content {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+          padding: 0 1.5rem 2rem;
+        }
 
-  .footer-brand {
-    grid-column: 1;
-  }
+        .footer-brand {
+          grid-column: 1;
+        }
 
-  .footer-social {
-    justify-content: flex-start;
-  }
-}
+        .footer-social {
+          justify-content: flex-start;
+        }
+      }
 
-@media (max-width: 480px) {
-  .footer-logo {
-    height: 40px;
-  }
+      @media (max-width: 480px) {
+        .footer-logo {
+          height: 40px;
+        }
 
-  .footer-social a {
-    width: 38px;
-    height: 38px;
-  }
+        .footer-social a {
+          width: 38px;
+          height: 38px;
+        }
 
-  .footer-social a svg {
-    width: 18px;
-    height: 18px;
-  }
-}
+        .footer-social a svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
       .hamburger {
         display: none;
         flex-direction: column;
@@ -1353,22 +1535,22 @@ footer::before {
         outline-offset: 2px;
       }
 
-   .hamburger {
-  position: relative;
-}
+      .hamburger {
+        position: relative;
+      }
 
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
+      .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
 
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-  transform: translateX(20px);
-}
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(20px);
+      }
 
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
+      .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
 
       .mobile-nav {
         display: none;
@@ -1402,47 +1584,47 @@ footer::before {
         color: #00c2ff;
         background: rgba(0, 194, 255, 0.1);
       }
-input,
-textarea {
-  width: 100%;
-  padding: 1rem 1.25rem;
-  border: 1px solid rgba(0, 194, 255, 0.2);
-  border-radius: 0.75rem;
-  font-family: inherit;
-  font-size: 1rem;
-  line-height: 1.5;
-  transition: all 0.3s ease;
-  background: rgba(255, 255, 255, 0.05);
-  color: white;
-  min-height: 48px;
-}
+      input,
+      textarea {
+        width: 100%;
+        padding: 1rem 1.25rem;
+        border: 1px solid rgba(0, 194, 255, 0.2);
+        border-radius: 0.75rem;
+        font-family: inherit;
+        font-size: 1rem;
+        line-height: 1.5;
+        transition: all 0.3s ease;
+        background: rgba(255, 255, 255, 0.05);
+        color: white;
+        min-height: 48px;
+      }
 
-input::placeholder,
-textarea::placeholder {
-  padding: 2px;
-  color: rgba(255, 255, 255, 0.4);
-}
+      input::placeholder,
+      textarea::placeholder {
+        padding: 2px;
+        color: rgba(255, 255, 255, 0.4);
+      }
 
-textarea {
-  resize: none;
-  min-height: 140px;
-  padding: 1rem 1.25rem;
-}
+      textarea {
+        resize: none;
+        min-height: 140px;
+        padding: 1rem 1.25rem;
+      }
 
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: #00c2ff;
-  box-shadow: 0 0 0 3px rgba(0, 194, 255, 0.15);
-  background: rgba(255, 255, 255, 0.08);
-}
-label {
-  color: #ffffff;
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  font-size: 0.9375rem;
-}
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #00c2ff;
+        box-shadow: 0 0 0 3px rgba(0, 194, 255, 0.15);
+        background: rgba(255, 255, 255, 0.08);
+      }
+      label {
+        color: #ffffff;
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        font-size: 0.9375rem;
+      }
       @media (max-width: 768px) {
         .hamburger {
           display: flex;
@@ -1731,132 +1913,93 @@ label {
 
           <!-- Service Cards Grid -->
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Card 1: Lead Generation -->
+            <!-- 1. Lead Generation -->
             <div class="service-card reveal-item">
-              <div class="card-content">
-                <div class="icon-container">
-                  <svg fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M13 7H7v6h6V7z"></path>
-                    <path
-                      fill-rule="evenodd"
-                      d="M7 2a1 1 0 012 0v1h2V2a1 1 0 112 0v1h2V2a1 1 0 112 0v1a2 2 0 012 2v2h1a1 1 0 110 2h-1v2h1a1 1 0 110 2h-1v2a2 2 0 01-2 2v1a1 1 0 11-2 0v-1h-2v1a1 1 0 11-2 0v-1a2 2 0 01-2-2v-2H3a1 1 0 110-2h1V9H3a1 1 0 110-2h1V5a2 2 0 012-2v-1z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </div>
-
-                <h3 class="card-title">Lead Generation</h3>
-
-                <p class="card-description">
-                  Building verified B2B lead lists and identifying
-                  decision-makers for strategic outreach campaigns that convert.
-                </p>
-
-                <div class="stat-badge">
-                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      fill-rule="evenodd"
-                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                  99% Accuracy
-                </div>
+              <div class="icon-circle mb-4">
+                <svg fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M13 7H7v6h6V7z"></path>
+                  <path
+                    fill-rule="evenodd"
+                    d="M7 2a1 1 0 012 0v1h2V2a1 1 0 112 0v1h2V2a1 1 0 112 0v1a2 2 0 012 2v2h1a1 1 0 110 2h-1v2h1a1 1 0 110 2h-1v2a2 2 0 01-2 2v1a1 1 0 11-2 0v-1h-2v1a1 1 0 11-2 0v-1a2 2 0 01-2-2v-2H3a1 1 0 110-2h1V9H3a1 1 0 110-2h1V5a2 2 0 012-2v-1z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
               </div>
+              <h3 class="text-white mb-3 font-bold text-lg">Lead Generation</h3>
+              <ul class="text-xs text-gray-400 space-y-1.5">
+                <li>• B2B Lead Generation</li>
+                <li>• LinkedIn Lead Generation</li>
+                <li>• Real Estate Lead Generation</li>
+                <li>• Social Media Lead Generation</li>
+                <li>• E-commerce Leads</li>
+                <li>• Healthcare & Medical Leads</li>
+                <li>• Contact List Building</li>
+              </ul>
             </div>
 
-            <!-- Card 2: Data Management -->
+            <!-- 2. Data Entry -->
             <div class="service-card reveal-item">
-              <div class="card-content">
-                <div class="icon-container">
-                  <svg fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
-                    ></path>
-                  </svg>
-                </div>
-
-                <h3 class="card-title">Data Management</h3>
-
-                <p class="card-description">
-                  Expert data entry, cleansing, verification, and seamless CRM
-                  integration to maintain pristine databases.
-                </p>
-
-                <div class="stat-badge">
-                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      fill-rule="evenodd"
-                      d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                  13K+ Hours
-                </div>
+              <div class="icon-circle mb-4">
+                <svg fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
+                  ></path>
+                </svg>
               </div>
+              <h3 class="text-white mb-3 font-bold text-lg">Data Entry</h3>
+              <ul class="text-xs text-gray-400 space-y-1.5">
+                <li>• Manual Data Entry</li>
+                <li>• Excel/Google Sheets Data Entry</li>
+                <li>• CRM Data Entry</li>
+                <li>• Copy-Paste Tasks</li>
+                <li>• PDF/Scanned Document Entry</li>
+                <li>• Data Cleanup & Formatting</li>
+              </ul>
             </div>
 
-            <!-- Card 3: Market Research -->
+            <!-- 3. Microsoft Office Services -->
             <div class="service-card reveal-item">
-              <div class="card-content">
-                <div class="icon-container">
-                  <svg fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
-                    <path
-                      fill-rule="evenodd"
-                      d="M4 5a2 2 0 012-2 1 1 0 000-2H2a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2h-2a1 1 0 000 2 2 2 0 012 2v11H4V5z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </div>
-
-                <h3 class="card-title">Market Research</h3>
-
-                <p class="card-description">
-                  Competitor analysis, custom data extraction, and actionable
-                  market insights that drive strategic decisions.
-                </p>
-
-                <div class="stat-badge">
-                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"
-                    ></path>
-                  </svg>
-                  120+ Projects
-                </div>
+              <div class="icon-circle mb-4">
+                <svg fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                  <path
+                    fill-rule="evenodd"
+                    d="M4 5a2 2 0 012-2 1 1 0 000-2H2a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2h-2a1 1 0 000 2 2 2 0 012 2v11H4V5z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
               </div>
+              <h3 class="text-white mb-3 font-bold text-lg">
+                Microsoft Office Services
+              </h3>
+              <ul class="text-xs text-gray-400 space-y-1.5">
+                <li>• Word Document Creation</li>
+                <li>• Excel Spreadsheet Development</li>
+                <li>• PowerPoint Presentation Design</li>
+                <li>• Data Visualization (Charts/Graphs)</li>
+                <li>• Document Editing & Formatting</li>
+                <li>• Report Creation</li>
+              </ul>
             </div>
 
-            <!-- Card 4: CRM Management -->
+            <!-- 4. CRM Management -->
             <div class="service-card reveal-item">
-              <div class="card-content">
-                <div class="icon-container">
-                  <svg fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"
-                    ></path>
-                  </svg>
-                </div>
-
-                <h3 class="card-title">CRM Management</h3>
-
-                <p class="card-description">
-                  Optimizing workflows and maintaining clean, organized
-                  databases across all major CRM platforms.
-                </p>
-
-                <div class="stat-badge">
-                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      fill-rule="evenodd"
-                      d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                  Real-time Sync
-                </div>
+              <div class="icon-circle mb-4">
+                <svg fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"
+                  ></path>
+                </svg>
               </div>
+              <h3 class="text-white mb-3 font-bold text-lg">CRM Management</h3>
+              <ul class="text-xs text-gray-400 space-y-1.5">
+                <li>• CRM Setup (HubSpot, Zoho, Salesforce)</li>
+                <li>• Lead Uploading & Tagging</li>
+                <li>• Pipeline Management</li>
+                <li>• CRM Cleanup & Optimization</li>
+                <li>• Contact Segmentation</li>
+                <li>• Automation Setup</li>
+              </ul>
             </div>
           </div>
 
@@ -1885,306 +2028,306 @@ label {
           </div>
         </div>
       </section>
-<!-- Tools & Technologies Section -->
-<section class="tools-section section-py">
-  <div class="max-w-7xl mx-auto section-px relative z-10">
-    <!-- Section Header -->
-    <div class="text-center mb-16">
-      <div
-        class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 backdrop-blur-sm mb-6"
-      >
-        <svg
-          class="w-5 h-5 text-cyan-400"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
-            clip-rule="evenodd"
-          ></path>
-        </svg>
-        <span class="text-cyan-300 text-sm font-medium"
-          >Our Technology Stack</span
-        >
-      </div>
-      <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-        Tools & <span class="gradient-text">Technologies We Use</span>
-      </h2>
-      <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-        Leveraging industry-leading platforms and tools to deliver
-        precise, scalable data solutions
-      </p>
-    </div>
-
-    <!-- All Tools Grid - Initially showing 2 rows -->
-    <div class="tools-grid-wrapper reveal-item">
-      <div
-        id="allToolsGrid"
-        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 tools-grid"
-      >
-        <!-- LinkedIn Sales Navigator -->
-        <div class="tool-card">
-          <div class="tool-icon-wrapper">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-              />
-            </svg>
+      <!-- Tools & Technologies Section -->
+      <section class="tools-section section-py">
+        <div class="max-w-7xl mx-auto section-px relative z-10">
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <div
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 backdrop-blur-sm mb-6"
+            >
+              <svg
+                class="w-5 h-5 text-cyan-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span class="text-cyan-300 text-sm font-medium"
+                >Our Technology Stack</span
+              >
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+              Tools & <span class="gradient-text">Technologies We Use</span>
+            </h2>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+              Leveraging industry-leading platforms and tools to deliver
+              precise, scalable data solutions
+            </p>
           </div>
-          <h4 class="tool-name">LinkedIn Sales Navigator</h4>
-          <p class="tool-description">Advanced B2B prospecting</p>
-        </div>
 
-        <!-- Apollo.io -->
-        <div class="tool-card">
-          <div class="tool-icon-wrapper">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"
-              />
-            </svg>
+          <!-- All Tools Grid - Initially showing 2 rows -->
+          <div class="tools-grid-wrapper reveal-item">
+            <div
+              id="allToolsGrid"
+              class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 tools-grid"
+            >
+              <!-- LinkedIn Sales Navigator -->
+              <div class="tool-card">
+                <div class="tool-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="tool-name">LinkedIn Sales Navigator</h4>
+                <p class="tool-description">Advanced B2B prospecting</p>
+              </div>
+
+              <!-- Apollo.io -->
+              <div class="tool-card">
+                <div class="tool-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="tool-name">Apollo.io</h4>
+                <p class="tool-description">Contact database & enrichment</p>
+              </div>
+
+              <!-- ZoomInfo -->
+              <div class="tool-card">
+                <div class="tool-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.51-3.49L17.5 6.5 9.99 9.99 6.5 17.5zm5.5-6.6c.61 0 1.1.49 1.1 1.1s-.49 1.1-1.1 1.1-1.1-.49-1.1-1.1.49-1.1 1.1-1.1z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="tool-name">ZoomInfo</h4>
+                <p class="tool-description">B2B intelligence platform</p>
+              </div>
+
+              <!-- Hunter.io -->
+              <div class="tool-card">
+                <div class="tool-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="tool-name">Hunter.io</h4>
+                <p class="tool-description">Email finder & verification</p>
+              </div>
+
+              <!-- Lusha -->
+              <div class="tool-card">
+                <div class="tool-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="tool-name">Lusha</h4>
+                <p class="tool-description">Contact information finder</p>
+              </div>
+
+              <!-- Seamless.ai -->
+              <div class="tool-card">
+                <div class="tool-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="tool-name">Seamless.ai</h4>
+                <p class="tool-description">Real-time B2B data</p>
+              </div>
+
+              <!-- HubSpot -->
+              <div class="tool-card">
+                <div class="tool-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M18.5 8.5V6c0-.55-.45-1-1-1h-2.5c0-1.66-1.34-3-3-3S9 3.34 9 5H6.5c-.55 0-1 .45-1 1v2.5c-1.66 0-3 1.34-3 3s1.34 3 3 3V17c0 .55.45 1 1 1H9c0 1.66 1.34 3 3 3s3-1.34 3-3h2.5c.55 0 1-.45 1-1v-2.5c1.66 0 3-1.34 3-3s-1.34-3-3-3zM12 3.5c.83 0 1.5.67 1.5 1.5h-3c0-.83.67-1.5 1.5-1.5zm0 17c-.83 0-1.5-.67-1.5-1.5h3c0 .83-.67 1.5-1.5 1.5z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="tool-name">HubSpot</h4>
+                <p class="tool-description">CRM & marketing hub</p>
+              </div>
+
+              <!-- Salesforce -->
+              <div class="tool-card">
+                <div class="tool-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="tool-name">Salesforce</h4>
+                <p class="tool-description">Enterprise CRM solution</p>
+              </div>
+
+              <!-- Zoho CRM -->
+              <div class="tool-card">
+                <div class="tool-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="tool-name">Zoho CRM</h4>
+                <p class="tool-description">Cloud-based CRM</p>
+              </div>
+
+              <!-- Pipedrive -->
+              <div class="tool-card">
+                <div class="tool-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="tool-name">Pipedrive</h4>
+                <p class="tool-description">Sales pipeline tool</p>
+              </div>
+
+              <!-- Airtable -->
+              <div class="tool-card">
+                <div class="tool-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="tool-name">Airtable</h4>
+                <p class="tool-description">Collaborative database</p>
+              </div>
+
+              <!-- Google Sheets -->
+              <div class="tool-card">
+                <div class="tool-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 12h2v5H7v-5zm8-5h2v10h-2V7zm-4 3h2v7h-2v-7z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="tool-name">Google Sheets</h4>
+                <p class="tool-description">Spreadsheet management</p>
+              </div>
+
+              <!-- ZeroBounce -->
+              <div class="tool-card">
+                <div class="tool-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="tool-name">ZeroBounce</h4>
+                <p class="tool-description">Email verification</p>
+              </div>
+
+              <!-- NeverBounce -->
+              <div class="tool-card">
+                <div class="tool-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="tool-name">NeverBounce</h4>
+                <p class="tool-description">Email list cleaning</p>
+              </div>
+
+              <!-- Clearbit -->
+              <div class="tool-card">
+                <div class="tool-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 16h2v2h-2zm0-6h2v4h-2z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="tool-name">Clearbit</h4>
+                <p class="tool-description">Data enrichment API</p>
+              </div>
+
+              <!-- FullContact -->
+              <div class="tool-card">
+                <div class="tool-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="tool-name">FullContact</h4>
+                <p class="tool-description">Identity resolution</p>
+              </div>
+
+              <!-- Snov.io -->
+              <div class="tool-card">
+                <div class="tool-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="tool-name">Snov.io</h4>
+                <p class="tool-description">Email finder & verifier</p>
+              </div>
+
+              <!-- EmailListVerify -->
+              <div class="tool-card">
+                <div class="tool-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"
+                    />
+                  </svg>
+                </div>
+                <h4 class="tool-name">EmailListVerify</h4>
+                <p class="tool-description">Bulk verification</p>
+              </div>
+            </div>
+
+            <!-- Show More Button -->
+            <div class="text-center mt-8">
+              <button
+                onclick="toggleAllTools()"
+                id="allToolsToggleBtn"
+                class="btn-secondary inline-flex items-center gap-2"
+              >
+                <span>Show More</span>
+                <svg
+                  class="w-5 h-5 transition-transform duration-300"
+                  id="allToolsIcon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+            </div>
           </div>
-          <h4 class="tool-name">Apollo.io</h4>
-          <p class="tool-description">Contact database & enrichment</p>
         </div>
-
-        <!-- ZoomInfo -->
-        <div class="tool-card">
-          <div class="tool-icon-wrapper">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5.5-2.5l7.51-3.49L17.5 6.5 9.99 9.99 6.5 17.5zm5.5-6.6c.61 0 1.1.49 1.1 1.1s-.49 1.1-1.1 1.1-1.1-.49-1.1-1.1.49-1.1 1.1-1.1z"
-              />
-            </svg>
-          </div>
-          <h4 class="tool-name">ZoomInfo</h4>
-          <p class="tool-description">B2B intelligence platform</p>
-        </div>
-
-        <!-- Hunter.io -->
-        <div class="tool-card">
-          <div class="tool-icon-wrapper">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
-              />
-            </svg>
-          </div>
-          <h4 class="tool-name">Hunter.io</h4>
-          <p class="tool-description">Email finder & verification</p>
-        </div>
-
-        <!-- Lusha -->
-        <div class="tool-card">
-          <div class="tool-icon-wrapper">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"
-              />
-            </svg>
-          </div>
-          <h4 class="tool-name">Lusha</h4>
-          <p class="tool-description">Contact information finder</p>
-        </div>
-
-        <!-- Seamless.ai -->
-        <div class="tool-card">
-          <div class="tool-icon-wrapper">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-              />
-            </svg>
-          </div>
-          <h4 class="tool-name">Seamless.ai</h4>
-          <p class="tool-description">Real-time B2B data</p>
-        </div>
-
-        <!-- HubSpot -->
-        <div class="tool-card">
-          <div class="tool-icon-wrapper">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M18.5 8.5V6c0-.55-.45-1-1-1h-2.5c0-1.66-1.34-3-3-3S9 3.34 9 5H6.5c-.55 0-1 .45-1 1v2.5c-1.66 0-3 1.34-3 3s1.34 3 3 3V17c0 .55.45 1 1 1H9c0 1.66 1.34 3 3 3s3-1.34 3-3h2.5c.55 0 1-.45 1-1v-2.5c1.66 0 3-1.34 3-3s-1.34-3-3-3zM12 3.5c.83 0 1.5.67 1.5 1.5h-3c0-.83.67-1.5 1.5-1.5zm0 17c-.83 0-1.5-.67-1.5-1.5h3c0 .83-.67 1.5-1.5 1.5z"
-              />
-            </svg>
-          </div>
-          <h4 class="tool-name">HubSpot</h4>
-          <p class="tool-description">CRM & marketing hub</p>
-        </div>
-
-        <!-- Salesforce -->
-        <div class="tool-card">
-          <div class="tool-icon-wrapper">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
-              />
-            </svg>
-          </div>
-          <h4 class="tool-name">Salesforce</h4>
-          <p class="tool-description">Enterprise CRM solution</p>
-        </div>
-
-        <!-- Zoho CRM -->
-        <div class="tool-card">
-          <div class="tool-icon-wrapper">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
-              />
-            </svg>
-          </div>
-          <h4 class="tool-name">Zoho CRM</h4>
-          <p class="tool-description">Cloud-based CRM</p>
-        </div>
-
-        <!-- Pipedrive -->
-        <div class="tool-card">
-          <div class="tool-icon-wrapper">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"
-              />
-            </svg>
-          </div>
-          <h4 class="tool-name">Pipedrive</h4>
-          <p class="tool-description">Sales pipeline tool</p>
-        </div>
-
-        <!-- Airtable -->
-        <div class="tool-card">
-          <div class="tool-icon-wrapper">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z"
-              />
-            </svg>
-          </div>
-          <h4 class="tool-name">Airtable</h4>
-          <p class="tool-description">Collaborative database</p>
-        </div>
-
-        <!-- Google Sheets -->
-        <div class="tool-card">
-          <div class="tool-icon-wrapper">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 12h2v5H7v-5zm8-5h2v10h-2V7zm-4 3h2v7h-2v-7z"
-              />
-            </svg>
-          </div>
-          <h4 class="tool-name">Google Sheets</h4>
-          <p class="tool-description">Spreadsheet management</p>
-        </div>
-
-        <!-- ZeroBounce -->
-        <div class="tool-card">
-          <div class="tool-icon-wrapper">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-              />
-            </svg>
-          </div>
-          <h4 class="tool-name">ZeroBounce</h4>
-          <p class="tool-description">Email verification</p>
-        </div>
-
-        <!-- NeverBounce -->
-        <div class="tool-card">
-          <div class="tool-icon-wrapper">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"
-              />
-            </svg>
-          </div>
-          <h4 class="tool-name">NeverBounce</h4>
-          <p class="tool-description">Email list cleaning</p>
-        </div>
-
-        <!-- Clearbit -->
-        <div class="tool-card">
-          <div class="tool-icon-wrapper">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM11 16h2v2h-2zm0-6h2v4h-2z"
-              />
-            </svg>
-          </div>
-          <h4 class="tool-name">Clearbit</h4>
-          <p class="tool-description">Data enrichment API</p>
-        </div>
-
-        <!-- FullContact -->
-        <div class="tool-card">
-          <div class="tool-icon-wrapper">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"
-              />
-            </svg>
-          </div>
-          <h4 class="tool-name">FullContact</h4>
-          <p class="tool-description">Identity resolution</p>
-        </div>
-
-        <!-- Snov.io -->
-        <div class="tool-card">
-          <div class="tool-icon-wrapper">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
-              />
-            </svg>
-          </div>
-          <h4 class="tool-name">Snov.io</h4>
-          <p class="tool-description">Email finder & verifier</p>
-        </div>
-
-        <!-- EmailListVerify -->
-        <div class="tool-card">
-          <div class="tool-icon-wrapper">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"
-              />
-            </svg>
-          </div>
-          <h4 class="tool-name">EmailListVerify</h4>
-          <p class="tool-description">Bulk verification</p>
-        </div>
-      </div>
-
-      <!-- Show More Button -->
-      <div class="text-center mt-8">
-        <button
-          onclick="toggleAllTools()"
-          id="allToolsToggleBtn"
-          class="btn-secondary inline-flex items-center gap-2"
-        >
-          <span>Show More</span>
-          <svg
-            class="w-5 h-5 transition-transform duration-300"
-            id="allToolsIcon"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 9l-7 7-7-7"
-            ></path>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
       <!-- Who We Serve & Why Choose Us -->
       <section class="section-py">
         <div class="max-w-7xl mx-auto section-px">
@@ -2244,7 +2387,7 @@ label {
         </div>
       </section>
       <!-- Client Reviews Marquee -->
-      <!-- <section class="reviews-section">
+      <section class="reviews-section">
         <div class="max-w-7xl mx-auto section-px relative z-10">
           <div class="text-center mb-12">
             <div
@@ -2270,45 +2413,55 @@ label {
               Real reviews from satisfied clients on Upwork
             </p>
           </div>
-<div class="swiper reviewsSwiper">
-      <div class="swiper-wrapper" id="reviewsWrapper">
-        <!-- Reviews will be loaded by JS -->
-      <!-- </div>
-      
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      
-      <div class="swiper-pagination"></div>
-    </div> -->
-<!-- 
+          <div class="swiper reviewsSwiper">
+            <div class="swiper-wrapper" id="reviewsWrapper">
+              <!-- Reviews will be loaded by JS -->
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
-      </section> --> 
+      </section>
       <!-- CTA Section -->
-<section class="section-py bg-gradient-to-r from-cyan-950/50 via-purple-950/50 to-cyan-950/50">
-  <div class="max-w-5xl mx-auto section-px text-center">
-    <div class="bg-gradient-to-br from-cyan-950/60 to-purple-950/60 rounded-3xl p-12 border border-cyan-500/30 backdrop-blur-sm">
-      <h2 class="text-white mb-6">Ready to Transform Your Data Strategy?</h2>
-      <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-        Join 100+ companies who trust ZA Solutions for accurate, high-quality data solutions that drive growth.
-      </p>
-      <div class="flex flex-wrap gap-4 justify-center">
-        <button onclick="showPage('contact')" class="btn-primary text-lg px-8 py-4">
-          Start Your Project
-        </button>
-        <button onclick="showPage('services')" class="btn-secondary text-lg px-8 py-4">
-          Explore Services
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
+      <section
+        class="section-py bg-gradient-to-r from-cyan-950/50 via-purple-950/50 to-cyan-950/50"
+      >
+        <div class="max-w-5xl mx-auto section-px text-center">
+          <div
+            class="bg-gradient-to-br from-cyan-950/60 to-purple-950/60 rounded-3xl p-12 border border-cyan-500/30 backdrop-blur-sm"
+          >
+            <h2 class="text-white mb-6">
+              Ready to Transform Your Data Strategy?
+            </h2>
+            <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join 100+ companies who trust ZA Solutions for accurate,
+              high-quality data solutions that drive growth.
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center">
+              <button
+                onclick="showPage('contact')"
+                class="btn-primary text-lg px-8 py-4"
+              >
+                Start Your Project
+              </button>
+              <button
+                onclick="showPage('services')"
+                class="btn-secondary text-lg px-8 py-4"
+              >
+                Explore Services
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
     <!-- About Page -->
     <div id="about" class="page">
-      <section
-        class="section-py"
-        style="background: linear-gradient(to bottom, #0a0e27, #0f1629)"
-      >
+      <section class="section-py">
+        <!-- style="background: linear-gradient(to bottom, #0a0e27, #0f1629)" -->
         <div class="max-w-6xl mx-auto section-px">
           <div class="text-center mb-16">
             <h1 class="text-white mb-6 reveal-item">About ZA Solutions</h1>
@@ -2607,23 +2760,25 @@ label {
 
     <!-- Services Page -->
     <div id="services" class="page">
-      <section
-        class="section-py"
-        >
+      <section class="section-py">
         <!-- style="background: linear-gradient(to bottom, #0a0e27, #0f1629)" -->
         <div class="max-w-7xl mx-auto section-px">
           <div class="flex flex-col justify-center items-center">
-            <h1 class="text-white mb-8 reveal-item">Our Services</h1>
+            <h2 class="text-5xl font-bold text-white my-6">
+              Our <span class="gradient-text">Specializations</span>
+            </h2>
             <p class="text-center text-gray-400 mb-12 max-w-2xl reveal-item">
               At ZA Solutions, we specialise in providing the data
               infrastructure and operational support necessary for businesses to
               achieve rapid, scalable growth.
             </p>
           </div>
-
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div
+            class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-12"
+          >
+            <!-- 1. Lead Generation -->
             <div class="service-card reveal-item">
-              <div class="icon-circle mb-6">
+              <div class="icon-circle mb-4">
                 <svg fill="currentColor" viewBox="0 0 20 20">
                   <path d="M13 7H7v6h6V7z"></path>
                   <path
@@ -2633,38 +2788,41 @@ label {
                   ></path>
                 </svg>
               </div>
-              <h3 class="text-white mb-3 font-bold">
-                Sales Pipeline & Outreach
-              </h3>
-              <ul class="text-sm text-gray-400 space-y-2">
-                <li>• B2B & Niche Lead Generation</li>
-                <li>• Email & Phone Number Sourcing</li>
-                <li>• List Building for Sales & Recruitment</li>
-                <li>• LinkedIn Research & Outreach</li>
+              <h3 class="text-white mb-3 font-bold text-lg">Lead Generation</h3>
+              <ul class="text-xs text-gray-400 space-y-1.5">
+                <li>• B2B Lead Generation</li>
+                <li>• LinkedIn Lead Generation</li>
+                <li>• Real Estate Lead Generation</li>
+                <li>• Social Media Lead Generation</li>
+                <li>• E-commerce Leads</li>
+                <li>• Healthcare & Medical Leads</li>
+                <li>• Contact List Building</li>
               </ul>
             </div>
 
+            <!-- 2. Data Entry -->
             <div class="service-card reveal-item">
-              <div class="icon-circle mb-6">
+              <div class="icon-circle mb-4">
                 <svg fill="currentColor" viewBox="0 0 20 20">
                   <path
                     d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
                   ></path>
                 </svg>
               </div>
-              <h3 class="text-white mb-3 font-bold">
-                Data Integrity & Management
-              </h3>
-              <ul class="text-sm text-gray-400 space-y-2">
-                <li>• Data Entry & Data Cleaning</li>
-                <li>• CRM/Data Enrichment</li>
-                <li>• PDF to Excel Conversion</li>
-                <li>• Quality Assurance (QA)</li>
+              <h3 class="text-white mb-3 font-bold text-lg">Data Entry</h3>
+              <ul class="text-xs text-gray-400 space-y-1.5">
+                <li>• Manual Data Entry</li>
+                <li>• Excel/Google Sheets Data Entry</li>
+                <li>• CRM Data Entry</li>
+                <li>• Copy-Paste Tasks</li>
+                <li>• PDF/Scanned Document Entry</li>
+                <li>• Data Cleanup & Formatting</li>
               </ul>
             </div>
 
+            <!-- 3. Microsoft Office Services -->
             <div class="service-card reveal-item">
-              <div class="icon-circle mb-6">
+              <div class="icon-circle mb-4">
                 <svg fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
                   <path
@@ -2674,12 +2832,228 @@ label {
                   ></path>
                 </svg>
               </div>
-              <h3 class="text-white mb-3 font-bold">Market Intelligence</h3>
-              <ul class="text-sm text-gray-400 space-y-2">
-                <li>• Market & Competitor Research</li>
-                <li>• Custom Data Collection</li>
-                <li>• Industry Trends Analysis</li>
-                <li>• Strategic Insights</li>
+              <h3 class="text-white mb-3 font-bold text-lg">
+                Microsoft Office Services
+              </h3>
+              <ul class="text-xs text-gray-400 space-y-1.5">
+                <li>• Word Document Creation</li>
+                <li>• Excel Spreadsheet Development</li>
+                <li>• PowerPoint Presentation Design</li>
+                <li>• Data Visualization (Charts/Graphs)</li>
+                <li>• Document Editing & Formatting</li>
+                <li>• Report Creation</li>
+              </ul>
+            </div>
+
+            <!-- 4. CRM Management -->
+            <div class="service-card reveal-item">
+              <div class="icon-circle mb-4">
+                <svg fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-white mb-3 font-bold text-lg">CRM Management</h3>
+              <ul class="text-xs text-gray-400 space-y-1.5">
+                <li>• CRM Setup (HubSpot, Zoho, Salesforce)</li>
+                <li>• Lead Uploading & Tagging</li>
+                <li>• Pipeline Management</li>
+                <li>• CRM Cleanup & Optimization</li>
+                <li>• Contact Segmentation</li>
+                <li>• Automation Setup</li>
+              </ul>
+            </div>
+
+            <!-- 5. Email Marketing & Outreach -->
+            <div class="service-card reveal-item">
+              <div class="icon-circle mb-4">
+                <svg fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                  ></path>
+                  <path
+                    d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-white mb-3 font-bold text-lg">
+                Email Marketing & Outreach
+              </h3>
+              <ul class="text-xs text-gray-400 space-y-1.5">
+                <li>• Cold Email Outreach</li>
+                <li>• Email Marketing Campaigns</li>
+                <li>• Follow-Up Email Sequences</li>
+                <li>• Email Copywriting</li>
+                <li>• List Segmentation</li>
+                <li>• Deliverability Optimization</li>
+              </ul>
+            </div>
+
+            <!-- 6. Data Scraping & Extraction -->
+            <div class="service-card reveal-item">
+              <div class="icon-circle mb-4">
+                <svg fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    fill-rule="evenodd"
+                    d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-white mb-3 font-bold text-lg">
+                Data Scraping & Extraction
+              </h3>
+              <ul class="text-xs text-gray-400 space-y-1.5">
+                <li>• Website Scraping</li>
+                <li>• Social Media Scraping</li>
+                <li>• Email/Phone Extraction</li>
+                <li>• PDF/Data Extraction</li>
+                <li>• Automated Scraping</li>
+                <li>• Competitor Data Scraping</li>
+              </ul>
+            </div>
+
+            <!-- 7. Influencer Research & Outreach -->
+            <div class="service-card reveal-item">
+              <div class="icon-circle mb-4">
+                <svg fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-white mb-3 font-bold text-lg">
+                Influencer Research & Outreach
+              </h3>
+              <ul class="text-xs text-gray-400 space-y-1.5">
+                <li>• Influencer Identification</li>
+                <li>• Niche-Based Influencer Lists</li>
+                <li>• Sponsored Campaign Lead Lists</li>
+                <li>• Outreach Message Writing</li>
+                <li>• Engagement & Performance Research</li>
+                <li>• Social Media Influencer Mapping</li>
+              </ul>
+            </div>
+
+            <!-- 8. Social Media Management -->
+            <div class="service-card reveal-item">
+              <div class="icon-circle mb-4">
+                <svg fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z"
+                  ></path>
+                  <path
+                    d="M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-white mb-3 font-bold text-lg">
+                Social Media Management
+              </h3>
+              <ul class="text-xs text-gray-400 space-y-1.5">
+                <li>• Content Scheduling</li>
+                <li>• Profile Optimization</li>
+                <li>• Captions & Posting</li>
+                <li>• Community Engagement</li>
+                <li>• Insights & Analytics</li>
+                <li>• Social Media Templates</li>
+              </ul>
+            </div>
+
+            <!-- 9. Graphic Designing -->
+            <div class="service-card reveal-item">
+              <div class="icon-circle mb-4">
+                <svg fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    fill-rule="evenodd"
+                    d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-white mb-3 font-bold text-lg">
+                Graphic Designing (Canva)
+              </h3>
+              <ul class="text-xs text-gray-400 space-y-1.5">
+                <li>• Logo Design</li>
+                <li>• Social Media Designs</li>
+                <li>• Canva Designs (Posts, Videos)</li>
+                <li>• Website Graphics</li>
+                <li>• Flyers, Posters & Brochures</li>
+                <li>• YouTube/Instagram Thumbnails</li>
+                <li>• Presentation Design</li>
+              </ul>
+            </div>
+
+            <!-- 10. Virtual Assistance -->
+            <div class="service-card reveal-item">
+              <div class="icon-circle mb-4">
+                <svg fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    fill-rule="evenodd"
+                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-white mb-3 font-bold text-lg">
+                Virtual Assistance
+              </h3>
+              <ul class="text-xs text-gray-400 space-y-1.5">
+                <li>• Administrative Support</li>
+                <li>• Email Inbox Management</li>
+                <li>• Calendar & Appointment Scheduling</li>
+                <li>• Online Research</li>
+                <li>• Task/Project Management</li>
+                <li>• Data Handling & Documentation</li>
+              </ul>
+            </div>
+
+            <!-- 11. PDF Services -->
+            <div class="service-card reveal-item">
+              <div class="icon-circle mb-4">
+                <svg fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    fill-rule="evenodd"
+                    d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-white mb-3 font-bold text-lg">PDF Services</h3>
+              <ul class="text-xs text-gray-400 space-y-1.5">
+                <li>• PDF to Word/Excel Conversion</li>
+                <li>• PDF Editing & Cleanup</li>
+                <li>• Fillable PDF Creation</li>
+                <li>• PDF Formatting</li>
+                <li>• Extracting Tables & Text</li>
+                <li>• Merging/Splitting PDFs</li>
+              </ul>
+            </div>
+
+            <!-- 12. Research Services -->
+            <div class="service-card reveal-item">
+              <div class="icon-circle mb-4">
+                <svg fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9 9a2 2 0 114 0 2 2 0 01-4 0z"></path>
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a4 4 0 00-3.446 6.032l-2.261 2.26a1 1 0 101.414 1.415l2.261-2.261A4 4 0 1011 5z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-white mb-3 font-bold text-lg">
+                Research Services
+              </h3>
+              <ul class="text-xs text-gray-400 space-y-1.5">
+                <li>• Market Research</li>
+                <li>• Competitor Research</li>
+                <li>• Product Research</li>
+                <li>• Company Background Research</li>
+                <li>• Niche-Specific Research</li>
+                <li>• Contact Verification Research</li>
               </ul>
             </div>
           </div>
@@ -2708,277 +3082,471 @@ label {
       <section class="section-py">
         <div class="max-w-7xl mx-auto section-px">
           <div class="flex flex-col justify-center items-center">
-            <h1 class="text-white mb-4 reveal-item">Our Team</h1>
+            <h2 class="text-5xl font-bold text-white my-6">
+              Our <span class="gradient-text">Team</span>
+            </h2>
             <p class="text-center text-gray-400 mb-12 max-w-2xl reveal-item">
               Global Reach, Local Dedication: At ZA Solutions, we operate on a
               global scale to ensure round-the-clock productivity and diverse
               market understanding.
             </p>
           </div>
-          <div class="grid md:grid-cols-2 gap-8">
-            <!-- Maria Masood -->
-            <div class="team-card reveal-item">
-              <div class="flex gap-4 mb-4">
-                <div
-                  class="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0 border border-cyan-500/30"
-                >
-                  <span class="text-2xl font-bold text-cyan-400">M</span>
-                </div>
-                <div>
-                  <h3 class="font-bold text-white">Maria Masood</h3>
-                  <p class="text-sm text-gray-400">CEO & Founder</p>
-                  <p class="text-xs text-gray-500">Bahawalpur, Pakistan</p>
-                </div>
+          <!-- Complete Team Cards Grid -->
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Maria Masood Card -->
+            <div
+              class="team-card-compact reveal-item"
+              onclick="openTeamModal('maria')"
+            >
+              <div class="team-avatar">
+                <span class="text-3xl font-bold text-cyan-400">M</span>
               </div>
-              <p class="text-sm text-gray-300 mb-3">
-                CEO and Founder of ZA Solutions with a 100% Job Success Score
-                and 13,000+ hours of successful project delivery across 120+
-                global projects. Expert in B2B lead generation, data management,
-                and executive support with strategic focus on cold email
-                strategies and verified list building.
+              <h3 class="font-bold text-white text-lg mt-4">Maria Masood</h3>
+              <p class="text-sm text-gray-400 mb-3">CEO & Founder</p>
+
+              <p class="team-summary text-sm text-gray-300 mb-4 px-2">
+                CEO with 100% Job Success Score, 13,000+ hours across 120+
+                global projects
               </p>
-              <p class="text-xs text-cyan-400 font-semibold mb-2">
-                Master of Philosophy - Quaid-e-Azam University
-              </p>
-              <div class="flex gap-2 mt-3">
+
+              <div class="social-icons flex gap-3 justify-center mb-4">
                 <a
                   href="mailto:mariamasood@zasolutions.co"
-                  class="text-xs text-cyan-400 hover:text-cyan-300"
-                  >Email</a
+                  onclick="event.stopPropagation()"
+                  aria-label="Email"
                 >
-                <span class="text-gray-600">•</span>
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                </a>
                 <a
                   href="https://www.linkedin.com/in/maria-masood-7a3530382/"
                   target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-xs text-cyan-400 hover:text-cyan-300"
-                  >LinkedIn</a
+                  onclick="event.stopPropagation()"
+                  aria-label="LinkedIn"
                 >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://wa.me/923256294921"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  aria-label="WhatsApp"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                    />
+                  </svg>
+                </a>
               </div>
+
+              <button class="btn-primary-small w-full">
+                View Full Profile
+              </button>
             </div>
 
-            <!-- Ali Raza Bukhari -->
-            <div class="team-card reveal-item">
-              <div class="flex gap-4 mb-4">
-                <div
-                  class="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0 border border-cyan-500/30"
-                >
-                  <span class="text-2xl font-bold text-cyan-400">A</span>
-                </div>
-                <div>
-                  <h3 class="font-bold text-white">Ali Raza Bukhari</h3>
-                  <p class="text-sm text-gray-400">
-                    Co-Founder & Director of Data Operations
-                  </p>
-                  <p class="text-xs text-gray-500">Bahawalpur, Pakistan</p>
-                </div>
+            <!-- Ali Raza Bukhari Card -->
+            <div
+              class="team-card-compact reveal-item"
+              onclick="openTeamModal('ali')"
+            >
+              <div class="team-avatar">
+                <span class="text-3xl font-bold text-cyan-400">A</span>
               </div>
-              <p class="text-sm text-gray-300 mb-3">
-                4 years of experience establishing high standards of data
-                integrity and operational reliability. Oversees B2B prospecting
-                methodologies, CRM management, and ensures foundational data
-                accuracy for successful client campaigns.
+              <h3 class="font-bold text-white text-lg mt-4">
+                Ali Raza Bukhari
+              </h3>
+              <p class="text-sm text-gray-400 mb-3">Co-Founder & Director</p>
+
+              <p class="team-summary text-sm text-gray-300 mb-4 px-2">
+                4 years establishing data integrity standards and operational
+                reliability for client success.
               </p>
-              <p class="text-xs text-cyan-400 font-semibold mb-2">
-                B2B Prospecting • LinkedIn Sales Navigator • CRM Management
-              </p>
-              <div class="flex gap-2 mt-3">
+
+              <div class="social-icons flex gap-3 justify-center mb-4">
                 <a
                   href="mailto:alirazabukhari@zasolutions.co"
-                  class="text-xs text-cyan-400 hover:text-cyan-300"
-                  >Email</a
+                  onclick="event.stopPropagation()"
+                  aria-label="Email"
                 >
-                <span class="text-gray-600">•</span>
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                </a>
                 <a
                   href="https://www.linkedin.com/in/ali-raza-bukhari-366b0257/"
                   target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-xs text-cyan-400 hover:text-cyan-300"
-                  >LinkedIn</a
+                  onclick="event.stopPropagation()"
+                  aria-label="LinkedIn"
                 >
-              </div>
-            </div>
-
-            <!-- Ayesha Akhtar -->
-            <div class="team-card reveal-item">
-              <div class="flex gap-4 mb-4">
-                <div
-                  class="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0 border border-cyan-500/30"
-                >
-                  <span class="text-2xl font-bold text-cyan-400">A</span>
-                </div>
-                <div>
-                  <h3 class="font-bold text-white">Ayesha Akhtar</h3>
-                  <p class="text-sm text-gray-400">
-                    Senior Specialist, Data Accuracy & Research
-                  </p>
-                  <p class="text-xs text-gray-500">Australia</p>
-                </div>
-              </div>
-              <p class="text-sm text-gray-300 mb-3">
-                3 years of experience delivering administrative and data
-                solutions with remarkable precision. Specializes in lead
-                generation with 99% email deliverability guarantee and 100% data
-                accuracy. Expert in B2B lead generation and CRM data entry.
-              </p>
-              <p class="text-xs text-cyan-400 font-semibold mb-2">
-                99% Email Deliverability • 100% Data Accuracy • CRM Management
-              </p>
-              <div class="flex gap-2 mt-3">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                    />
+                  </svg>
+                </a>
                 <a
-                  href="mailto:ayeshaakhtar@zasolutions.co"
-                  class="text-xs text-cyan-400 hover:text-cyan-300"
-                  >Email</a
+                  href="https://wa.me/923219688055"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  aria-label="WhatsApp"
                 >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                    />
+                  </svg>
+                </a>
               </div>
+
+              <button class="btn-primary-small w-full">
+                View Full Profile
+              </button>
             </div>
 
-            <!-- Kiran Fatima -->
-            <div class="team-card reveal-item">
-              <div class="flex gap-4 mb-4">
-                <div
-                  class="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0 border border-cyan-500/30"
-                >
-                  <span class="text-2xl font-bold text-cyan-400">K</span>
-                </div>
-                <div>
-                  <h3 class="font-bold text-white">Kiran Fatima</h3>
-                  <p class="text-sm text-gray-400">
-                    Senior Specialist, Data & Digital Outreach
-                  </p>
-                  <p class="text-xs text-gray-500">Bahawalpur, Pakistan</p>
-                </div>
+            <!-- Hanan Rashid Card -->
+            <div
+              class="team-card-compact reveal-item"
+              onclick="openTeamModal('hanan')"
+            >
+              <div class="team-avatar">
+                <span class="text-3xl font-bold text-cyan-400">H</span>
               </div>
-              <p class="text-sm text-gray-300 mb-3">
-                Top-Rated Freelancer recognized for consistent delivery of
-                accurate and timely results. Expertise in B2B lead generation,
-                data research, digital marketing support, content writing, and
-                e-commerce operations.
-              </p>
-              <p class="text-xs text-cyan-400 font-semibold mb-2">
-                B2B Lead Generation • Content Writing • E-commerce Support
-              </p>
-              <div class="flex gap-2 mt-3">
-                <a
-                  href="mailto:kiranfatima@zasolutions.co"
-                  class="text-xs text-cyan-400 hover:text-cyan-300"
-                  >Email</a
-                >
-              </div>
-            </div>
+              <h3 class="font-bold text-white text-lg mt-4">Hanan Rashid</h3>
+              <p class="text-sm text-gray-400 mb-3">Client Liaison Officer</p>
 
-            <!-- Muhammad Rizwan Khan -->
-            <div class="team-card reveal-item">
-              <div class="flex gap-4 mb-4">
-                <div
-                  class="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0 border border-cyan-500/30"
-                >
-                  <span class="text-2xl font-bold text-cyan-400">M</span>
-                </div>
-                <div>
-                  <h3 class="font-bold text-white">Muhammad Rizwan Khan</h3>
-                  <p class="text-sm text-gray-400">
-                    Senior Lead Generation & Data Verification Specialist
-                  </p>
-                  <p class="text-xs text-gray-500">United States</p>
-                </div>
-              </div>
-              <p class="text-sm text-gray-300 mb-3">
-                3+ years of specialized experience in lead mining and data
-                management. Expert in zero-bounce lead generation and CRM data
-                management across major platforms including HubSpot, Salesforce,
-                and Pipedrive.
+              <p class="team-summary text-sm text-gray-300 mb-4 px-2">
+                Provides dedicated support bridging clients and operations with
+                transparent oversight.
               </p>
-              <p class="text-xs text-cyan-400 font-semibold">
-                Zero-Bounce Email Verification • Real Estate Leads • E-commerce
-                Data
-              </p>
-            </div>
 
-            <!-- Hadia Khan -->
-            <div class="team-card reveal-item">
-              <div class="flex gap-4 mb-4">
-                <div
-                  class="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0 border border-cyan-500/30"
-                >
-                  <span class="text-2xl font-bold text-cyan-400">H</span>
-                </div>
-                <div>
-                  <h3 class="font-bold text-white">Hadia Khan</h3>
-                  <p class="text-sm text-gray-400">Client Liaison Director</p>
-                  <p class="text-xs text-gray-500">Bahawalpur, Pakistan</p>
-                </div>
-              </div>
-              <p class="text-sm text-gray-300 mb-3">
-                Primary strategic link between ZA Solutions and valued clients.
-                Focuses on building deep, long-term partnerships, strategic
-                relationship cultivation, and ensuring client objectives are
-                exceeded through dedicated account management.
-              </p>
-              <p class="text-xs text-cyan-400 font-semibold mb-2">
-                Strategic Account Management • Client Advocacy • Success
-                Planning
-              </p>
-              <div class="flex gap-2 mt-3">
-                <a
-                  href="mailto:hadiakhan@zasolutions.co"
-                  class="text-xs text-cyan-400 hover:text-cyan-300"
-                  >Email</a
-                >
-              </div>
-            </div>
-
-            <!-- Hanan Rashid -->
-            <div class="team-card reveal-item">
-              <div class="flex gap-4 mb-4">
-                <div
-                  class="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0 border border-cyan-500/30"
-                >
-                  <span class="text-2xl font-bold text-cyan-400">H</span>
-                </div>
-                <div>
-                  <h3 class="font-bold text-white">Hanan Rashid</h3>
-                  <p class="text-sm text-gray-400">Client Liaison Officer</p>
-                  <p class="text-xs text-gray-500">Australia</p>
-                </div>
-              </div>
-              <p class="text-sm text-gray-300 mb-3">
-                Critical link ensuring seamless communication across time zones.
-                Provides dedicated support during extended hours, bridging gaps
-                between clients and operations with transparent project
-                oversight.
-              </p>
-              <p class="text-xs text-cyan-400 font-semibold mb-2">
-                Time Zone Coordination • Project Communication • Client
-                Relations
-              </p>
-              <div class="flex gap-2 mt-3">
+              <div class="social-icons flex gap-3 justify-center mb-4">
                 <a
                   href="mailto:hananrashid@zasolutions.co"
-                  class="text-xs text-cyan-400 hover:text-cyan-300"
-                  >Email</a
+                  onclick="event.stopPropagation()"
+                  aria-label="Email"
                 >
-                <span class="text-gray-600">•</span>
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                </a>
                 <a
                   href="https://www.linkedin.com/in/hanan-rashid-a28b5075/"
                   target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-xs text-cyan-400 hover:text-cyan-300"
-                  >LinkedIn</a
+                  onclick="event.stopPropagation()"
+                  aria-label="LinkedIn"
                 >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://wa.me/+61475029475"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  aria-label="WhatsApp"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+
+              <button class="btn-primary-small w-full">
+                View Full Profile
+              </button>
+            </div>
+
+            <!-- Muhammad Rizwan Khan Card -->
+            <div
+              class="team-card-compact reveal-item"
+              onclick="openTeamModal('rizwan')"
+            >
+              <div class="team-avatar">
+                <span class="text-3xl font-bold text-cyan-400">M</span>
+              </div>
+              <h3 class="font-bold text-white text-lg mt-4">
+                Muhammad Rizwan Khan
+              </h3>
+              <p class="text-sm text-gray-400 mb-3">
+                Senior Lead Generation Specialist
+              </p>
+
+              <p class="team-summary text-sm text-gray-300 mb-4 px-2">
+                3+ years in lead mining and data verification.
+              </p>
+
+              <div class="social-icons flex gap-3 justify-center mb-4">
+                <a
+                  href="mailto:muhammadrizwan@zasolutions.co"
+                  onclick="event.stopPropagation()"
+                  aria-label="Email"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  onclick="event.stopPropagation(); return false;"
+                  aria-label="LinkedIn"
+                  style="opacity: 0.3; cursor: not-allowed"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  onclick="event.stopPropagation(); return false;"
+                  aria-label="WhatsApp"
+                  style="opacity: 0.3; cursor: not-allowed"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="currentColor
+        "
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <button class="btn-primary-small w-full">
+                View Full Profile
+              </button>
+            </div>
+
+            <!-- Ayesha Akhtar Card -->
+            <div
+              class="team-card-compact reveal-item"
+              onclick="openTeamModal('ayesha')"
+            >
+              <div class="team-avatar">
+                <span class="text-3xl font-bold text-cyan-400">A</span>
+              </div>
+              <h3 class="font-bold text-white text-lg mt-4">Ayesha Akhtar</h3>
+              <p class="text-sm text-gray-400 mb-3">
+                Senior Specialist, Data Accuracy
+              </p>
+
+              <p class="team-summary text-sm text-gray-300 mb-4 px-2">
+                3 years delivering precise data solutions with 99% email
+                deliverability.
+              </p>
+
+              <div class="social-icons flex gap-3 justify-center mb-4">
+                <a
+                  href="mailto:ayeshaakhtar@zasolutions.co"
+                  onclick="event.stopPropagation()"
+                  aria-label="Email"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  onclick="event.stopPropagation(); return false;"
+                  aria-label="LinkedIn"
+                  style="opacity: 0.3; cursor: not-allowed"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://wa.me/61466946222"
+                  target="_blank"
+                  onclick="event.stopPropagation()"
+                  aria-label="WhatsApp"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+
+              <button class="btn-primary-small w-full">
+                View Full Profile
+              </button>
+            </div>
+
+            <!-- Kiran Fatima Card -->
+            <div
+              class="team-card-compact reveal-item"
+              onclick="openTeamModal('kiran')"
+            >
+              <div class="team-avatar">
+                <span class="text-3xl font-bold text-cyan-400">K</span>
+              </div>
+              <h3 class="font-bold text-white text-lg mt-4">Kiran Fatima</h3>
+              <p class="text-sm text-gray-400 mb-3">
+                Senior Specialist, Data & Outreach
+              </p>
+
+              <p class="team-summary text-sm text-gray-300 mb-4 px-2">
+                Top-Rated Freelancer with expertise in B2B lead generation and
+                e-commerce support.
+              </p>
+              <div class="social-icons flex gap-3 justify-center mb-4">
+                <a
+                  href="mailto:kiranfatima@zasolutions.co"
+                  onclick="event.stopPropagation()"
+                  aria-label="Email"
+                >
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  onclick="event.stopPropagation(); return false;"
+                  aria-label="LinkedIn"
+                  style="opacity: 0.3; cursor: not-allowed"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  onclick="event.stopPropagation(); return false;"
+                  aria-label="WhatsApp"
+                  style="opacity: 0.3; cursor: not-allowed"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+
+              <button class="btn-primary-small w-full">
+                View Full Profile
+              </button>
+            </div>
+          </div>
+
+          <!-- Team Member Modal -->
+          <div id="teamModal" class="team-modal hidden">
+            <div class="modal-overlay" onclick="closeTeamModal()"></div>
+
+            <div class="modal-content-team">
+              <button class="modal-close" onclick="closeTeamModal()">✕</button>
+
+              <!-- Single Column Compact Layout -->
+              <div class="text-center">
+                <!-- Avatar -->
+                <div class="modal-avatar mx-auto mb-4">
+                  <span id="modalAvatar" class="text-5xl font-bold text-cyan-400">M</span>
+                </div>
+
+                <!-- Name & Role -->
+                <h2 id="modalName" class="text-2xl font-bold text-white mb-1"></h2>
+                <p id="modalRole" class="text-cyan-400 text-sm mb-1"></p>
+                <p id="modalLocation" class="text-xs text-gray-400 mb-4"></p>
+
+                <!-- Description -->
+                <p id="modalDescription" class="text-gray-300 text-sm leading-relaxed mb-6 text-left"></p>
+
+                <!-- Social Links -->
+                <div>
+                  <h4 class="text-sm font-semibold text-white mb-3">Connect</h4>
+                  <div id="modalSocials" class="flex gap-3 justify-center"></div>
+                </div>
               </div>
             </div>
           </div>
+
         </div>
       </section>
     </div>
 
     <!-- Contact Page -->
     <div id="contact" class="page">
-      <section
-        class="section-py"
-        style="background: linear-gradient(to bottom, #0a0e27, #0f1629)"
-      >
+      <section class="section-py">
+        <!-- style="background: linear-gradient(to bottom, #0a0e27, #0f1629)" -->
         <div class="max-w-6xl mx-auto section-px">
           <div class="text-center mb-12 pt-6">
             <h2 class="text-5xl font-bold text-white mb-6">
@@ -3027,9 +3595,9 @@ label {
                     <div>
                       <h3 class="font-semibold text-white mb-1">Email</h3>
                       <a
-                        href="mailto:mariamasood@zasolutions.co"
+                        href="mailto:info@zasolutions.co"
                         class="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
-                        >mariamasood@zasolutions.co</a
+                        >info@zasolutions.co</a
                       >
                     </div>
                   </div>
@@ -3053,12 +3621,16 @@ label {
                       </svg>
                     </div>
                     <div>
-                      <h3 class="font-semibold text-white mb-1">Phone</h3>
+                      <h3 class="font-semibold text-white mb-1">Wattsap</h3>
                       <a
-                        href="tel:+923256294921"
+                        href="https://wa.me/61466946222"
+                        target="_blank"
                         class="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
-                        >+92 325 629 4921</a
+                        onclick="event.stopPropagation()"
+                        aria-label="WhatsApp"
                       >
+                        +92 325 629 4921
+                      </a>
                     </div>
                   </div>
 
@@ -3088,7 +3660,7 @@ label {
                     </div>
                   </div>
 
-                  <div class="flex items-start gap-4">
+                  <!-- <div class="flex items-start gap-4">
                     <div
                       class="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center flex-shrink-0"
                     >
@@ -3106,17 +3678,7 @@ label {
                         ></path>
                       </svg>
                     </div>
-                    <div>
-                      <h3 class="font-semibold text-white mb-1">Website</h3>
-                      <a
-                        href="https://zasolutions.co/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
-                        >zasolutions.co</a
-                      >
-                    </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -3216,154 +3778,185 @@ label {
         </div>
       </section>
     </div>
-<footer>
-  <div class="footer-content">
-    <div class="footer-brand">
-      <img
-        src="./public/image.png"
-        alt="ZA Solutions Logo"
-        class="footer-logo"
-      />
-      <p class="footer-description">
-        Empowering businesses with accurate, high-quality data and
-        operational excellence. Transform your B2B strategy with
-        precision-engineered solutions.
-      </p>
-      <div class="footer-social">
-       <a 
-          href="https://www.linkedin.com/company/za-solutions-bwp/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="LinkedIn"
-        >
-          <svg
-            class="w-5 h-5 text-cyan-400"
-            fill="currentColor"
-            viewBox="0 0 24 24"
+    <footer>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img
+            src="./public/image.png"
+            alt="ZA Solutions Logo"
+            class="footer-logo"
+          />
+          <p class="footer-description">
+            Empowering businesses with accurate, high-quality data and
+            operational excellence. Transform your B2B strategy with
+            precision-engineered solutions.
+          </p>
+          <div class="footer-social">
+            <a
+              href="https://www.linkedin.com/company/za-solutions-bwp/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <svg
+                class="w-5 h-5 text-cyan-400"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.facebook.com/people/ZA-Solutions/61572168118592/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <svg
+                class="w-5 h-5 text-cyan-400"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/za.solutions.bwp/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <svg
+                class="w-5 h-5 text-cyan-400"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                />
+              </svg>
+            </a>
+            <a href="mailto:mariamasood@zasolutions.co" aria-label="Email">
+              <svg
+                class="w-5 h-5 text-cyan-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="https://wa.me/61466946222"
+              target="_blank"
+              onclick="event.stopPropagation()"
+              aria-label="WhatsApp"
+            >
+              <svg
+                class="w-5 h-5 text-cyan-400"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <a href="#" onclick="showPage('home'); return false;">Home</a>
+          <a href="#" onclick="showPage('about'); return false;">About Us</a>
+          <a href="#" onclick="showPage('services'); return false;"
+            >Our Services</a
           >
-            <path
-              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-            />
-          </svg>
-        </a>
-        <a
-          href="https://www.facebook.com/people/ZA-Solutions/61572168118592/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Facebook"
-        >
-          <svg
-            class="w-5 h-5 text-cyan-400"
-            fill="currentColor"
-            viewBox="0 0 24 24"
+          <a href="#" onclick="showPage('team'); return false;"
+            >Meet the Team</a
           >
-            <path
-              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
-            />
-          </svg>
-        </a>
-        <a
-          href="https://www.instagram.com/za.solutions.bwp/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-        >
-          <svg
-            class="w-5 h-5 text-cyan-400"
-            fill="currentColor"
-            viewBox="0 0 24 24"
+          <a href="#" onclick="showPage('contact'); return false;">Contact</a>
+        </div>
+
+        <div class="footer-section">
+          <h4>Services</h4>
+          <a href="#" onclick="showPage('services'); return false;"
+            >Lead Generation</a
           >
-            <path
-              d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
-            />
-          </svg>
-        </a>
-        <a href="mailto:mariamasood@zasolutions.co" aria-label="Email">
-          <svg
-            class="w-5 h-5 text-cyan-400"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+          <a href="#" onclick="showPage('services'); return false;"
+            >Data Management</a
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-            ></path>
-          </svg>
-        </a>
+          <a href="#" onclick="showPage('services'); return false;"
+            >Market Research</a
+          >
+          <a href="#" onclick="showPage('services'); return false;"
+            >CRM Management</a
+          >
+        </div>
+
+        <div class="footer-section">
+          <h4>Get in Touch</h4>
+          <a href="mailto:info@zasolutions.co">info@zasolutions.co</a>
+          <a href="tel:+923256294921">+92 325 629 4921</a>
+          <a
+            href="https://www.linkedin.com/company/za-solutions-bwp/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+          <a
+            href="https://www.facebook.com/people/ZA-Solutions/61572168118592/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >FaceBook</a
+          >
+          <a
+            href="https://www.instagram.com/za.solutions.bwp/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Instagram</a
+          >
+        </div>
       </div>
-    </div>
 
-    <div class="footer-section">
-      <h4>Quick Links</h4>
-      <a href="#" onclick="showPage('home'); return false;">Home</a>
-      <a href="#" onclick="showPage('about'); return false;">About Us</a>
-      <a href="#" onclick="showPage('services'); return false;">Our Services</a>
-      <a href="#" onclick="showPage('team'); return false;">Meet the Team</a>
-      <a href="#" onclick="showPage('contact'); return false;">Contact</a>
-    </div>
-
-    <div class="footer-section">
-      <h4>Services</h4>
-      <a href="#" onclick="showPage('services'); return false;">Lead Generation</a>
-      <a href="#" onclick="showPage('services'); return false;">Data Management</a>
-      <a href="#" onclick="showPage('services'); return false;">Market Research</a>
-      <a href="#" onclick="showPage('services'); return false;">CRM Management</a>
-    </div>
-
-    <div class="footer-section">
-      <h4>Get in Touch</h4>
-      <a href="mailto:mariamasood@zasolutions.co">mariamasood@zasolutions.co</a>
-      <a href="tel:+923256294921">+92 325 629 4921</a>
-      <a
-        href="https://www.linkedin.com/company/za-solutions-bwp/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >LinkedIn</a>
-        <a
-        href="https://www.facebook.com/people/ZA-Solutions/61572168118592/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >FaceBook</a>
-        <a
-        href="https://www.instagram.com/za.solutions.bwp/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Instagram</a>
-    </div>
-
-  </div>
-
-  <div class="footer-divider">
-    <p>
-      &copy; 2025 ZA Solutions. All rights reserved. | Driven by Data, Defined by Accuracy
-    </p>
-  </div>
-</footer>
+      <div class="footer-divider">
+        <p>
+          &copy; 2025 ZA Solutions. All rights reserved. | Driven by Data,
+          Defined by Accuracy
+        </p>
+      </div>
+    </footer>
     <script>
       // Toggle all tools section expansion
-function toggleAllTools() {
-  const grid = document.getElementById('allToolsGrid');
-  const btn = document.getElementById('allToolsToggleBtn');
-  const icon = document.getElementById('allToolsIcon');
-  const btnText = btn.querySelector('span');
-  
-  grid.classList.toggle('expanded');
-  icon.classList.toggle('rotate-180');
-  
-  if (grid.classList.contains('expanded')) {
-    btnText.textContent = 'Show Less';
-  } else {
-    btnText.textContent = 'Show More';
-    // Scroll to section header smoothly
-    document.querySelector('.tools-section').scrollIntoView({ 
-      behavior: 'smooth', 
-      block: 'start' 
-    });
-  }
-}
+      function toggleAllTools() {
+        const grid = document.getElementById("allToolsGrid");
+        const btn = document.getElementById("allToolsToggleBtn");
+        const icon = document.getElementById("allToolsIcon");
+        const btnText = btn.querySelector("span");
+
+        grid.classList.toggle("expanded");
+        icon.classList.toggle("rotate-180");
+
+        if (grid.classList.contains("expanded")) {
+          btnText.textContent = "Show Less";
+        } else {
+          btnText.textContent = "Show More";
+          // Scroll to section header smoothly
+          document.querySelector(".tools-section").scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }
       // Reviews data
       const reviews = [
         {
@@ -3557,9 +4150,7 @@ function toggleAllTools() {
         </div>
         <div class="review-date">${review.date}</div>
       </div>
-      <div class="review-header">
-        <h3 class="review-title">${review.title}</h3>
-      </div>
+      <h3 class="review-title">${review.title}</h3>
       <div class="rating-stars">
         ${stars
           .split("")
@@ -3570,62 +4161,109 @@ function toggleAllTools() {
     </div>
   `;
       }
-
-      
+      // Initialize reviews when Swiper is loaded
       function initializeReviews() {
-  const reviewsWrapper = document.getElementById('reviewsWrapper');
-  if (!reviewsWrapper) return;
+        const reviewsWrapper = document.getElementById("reviewsWrapper");
+        if (!reviewsWrapper) return;
 
-  reviewsWrapper.innerHTML = reviews.map(createReviewCard).join('');
+        reviewsWrapper.innerHTML = reviews
+          .map((review) => {
+            const stars = "★".repeat(review.rating);
+            return `
+        <div class="swiper-slide">
+          <div class="review-card" onclick="window.open('${
+            review.link
+          }', '_blank')">
+            <div class="review-top">
+              <div class="upwork-badge">
+                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/>
+                </svg>
+                Upwork
+              </div>
+              <div class="review-date">${review.date}</div>
+            </div>
+            <div class="review-header">
+              <h3 class="review-title">${review.title}</h3>
+            </div>
+            <div class="rating-stars">
+              ${stars
+                .split("")
+                .map(() => '<span class="star">★</span>')
+                .join("")}
+            </div>
+            <p class="review-text">${review.text}</p>
+          </div>
+        </div>
+      `;
+          })
+          .join("");
 
-  // Initialize Swiper without loop (rewind instead)
-  new Swiper('.reviewsSwiper', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    rewind: true, // Go back to start instead of infinite loop
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-    speed: 600,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      dynamicBullets: true,
-    },
-    breakpoints: {
-      640: { 
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      1024: { 
-        slidesPerView: 3,
-        spaceBetween: 24,
-      },
-    },
-  });
-}
+        // Initialize Swiper
+        new Swiper(".reviewsSwiper", {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          rewind: true,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          },
+          speed: 600,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
+          },
+          breakpoints: {
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 24,
+            },
+          },
+        });
+      }
 
-function showPage(pageId) {
-  const pages = document.querySelectorAll(".page");
-  pages.forEach((page) => page.classList.remove("active"));
-  document.getElementById(pageId).classList.add("active");
+      // Load page from hash on initial load
+      window.addEventListener("DOMContentLoaded", () => {
+        const path =
+          window.location.pathname.slice(1) || window.location.hash.slice(1);
+        const validPages = ["home", "about", "services", "team", "contact"];
 
-  // Update URL without hash - professional style
-  const newUrl = pageId === 'home' ? '/' : '/' + pageId;
-  history.pushState({ page: pageId }, '', newUrl);
+        if (path && validPages.includes(path)) {
+          showPage(path);
+        } else {
+          showPage("home");
+        }
+      });
 
-  // Update active nav links
-  updateActiveNavLinks(pageId);
+      // Initialize reviews AFTER Swiper library loads
+      window.addEventListener("load", () => {
+        initializeReviews();
+      });
+      function showPage(pageId) {
+        const pages = document.querySelectorAll(".page");
+        pages.forEach((page) => page.classList.remove("active"));
+        document.getElementById(pageId).classList.add("active");
 
-  window.scrollTo(0, 0);
-  closeMobileNav();
-}
+        // Update URL without hash - professional style
+        const newUrl = pageId === "home" ? "/" : "/" + pageId;
+        history.pushState({ page: pageId }, "", newUrl);
+
+        // Update active nav links
+        updateActiveNavLinks(pageId);
+
+        window.scrollTo(0, 0);
+        closeMobileNav();
+      }
       // Update active state on navigation links
       function updateActiveNavLinks(activePageId) {
         // Desktop nav
@@ -3651,13 +4289,14 @@ function showPage(pageId) {
       // Load page from hash on initial load
       window.addEventListener("DOMContentLoaded", () => {
         // Initialize marquee first
-      initializeReviews()
+        initializeReviews();
 
-        const hash = window.location.hash.slice(1);
+        const path =
+          window.location.pathname.slice(1) || window.location.hash.slice(1);
         const validPages = ["home", "about", "services", "team", "contact"];
 
-        if (hash && validPages.includes(hash)) {
-          showPage(hash);
+        if (path && validPages.includes(path)) {
+          showPage(path);
         } else {
           showPage("home");
         }
@@ -3731,6 +4370,181 @@ function showPage(pageId) {
           alert("Thank you for your message! We will get back to you soon.");
           this.reset();
         });
+      }
+      // Complete Team member data
+      const teamData = {
+        maria: {
+          name: "Maria Masood",
+          role: "CEO & Founder",
+          location: "Bahawalpur, Pakistan",
+          avatar: "M",
+          education: "Master of Philosophy - Quaid-e-Azam University",
+          description:
+            "CEO and Founder of ZA Solutions with a 100% Job Success Score and 13,000+ hours of successful project delivery across 120+ global projects. Expert in B2B lead generation, data management, and executive support with strategic focus on cold email strategies and verified list building.",
+          socials: [
+            { icon: "email", link: "mailto:mariamasood@zasolutions.co" },
+            {
+              icon: "linkedin",
+              link: "https://www.linkedin.com/in/maria-masood-7a3530382/",
+            },
+            {
+              icon: "upwork",
+              link: "https://www.upwork.com/freelancers/mariamasood",
+            },
+          ],
+        },
+        ali: {
+          name: "Ali Raza Bukhari",
+          role: "Co-Founder & Director of Data Operations",
+          location: "Bahawalpur, Pakistan",
+          avatar: "A",
+          education: "N/A",
+          description:
+            "4 years of experience establishing high standards of data integrity and operational reliability. Oversees B2B prospecting methodologies, CRM management, and ensures foundational data accuracy for successful client campaigns.",
+          socials: [
+            { icon: "email", link: "mailto:alirazabukhari@zasolutions.co" },
+            {
+              icon: "linkedin",
+              link: "https://www.linkedin.com/in/ali-raza-bukhari-366b0257/",
+            },
+          ],
+        },
+        ayesha: {
+          name: "Ayesha Akhtar",
+          role: "Senior Specialist, Data Accuracy & Research",
+          location: "Australia",
+          avatar: "A",
+          skills: [
+            "99% Email Deliverability",
+            "100% Data Accuracy",
+            "CRM Management",
+          ],
+          education: "N/A",
+          description:
+            "3 years of experience delivering administrative and data solutions with remarkable precision. Specializes in lead generation with 99% email deliverability guarantee and 100% data accuracy. Expert in B2B lead generation and CRM data entry.",
+          socials: [
+            { icon: "email", link: "mailto:ayeshaakhtar@zasolutions.co" },
+          ],
+        },
+        kiran: {
+          name: "Kiran Fatima",
+          role: "Senior Specialist, Data & Digital Outreach",
+          location: "Bahawalpur, Pakistan",
+          avatar: "K",
+          skills: [
+            "B2B Lead Generation",
+            "Content Writing",
+            "E-commerce Support",
+          ],
+          education: "N/A",
+          description:
+            "Top-Rated Freelancer recognized for consistent delivery of accurate and timely results. Expertise in B2B lead generation, data research, digital marketing support, content writing, and e-commerce operations.",
+          socials: [
+            { icon: "email", link: "mailto:kiranfatima@zasolutions.co" },
+          ],
+        },
+        rizwan: {
+          name: "Muhammad Rizwan Khan",
+          role: "Senior Lead Generation & Data Verification Specialist",
+          location: "United States",
+          avatar: "M",
+          skills: [
+            "Zero-Bounce Email Verification",
+            "Real Estate Leads",
+            "E-commerce Data",
+          ],
+          education: "N/A",
+          description:
+            "3+ years of specialized experience in lead mining and data management. Expert in zero-bounce lead generation and CRM data management across major platforms including HubSpot, Salesforce, and Pipedrive.",
+          socials: [],
+        },
+        hadia: {
+          name: "Hadia Khan",
+          role: "Client Liaison Director",
+          location: "Bahawalpur, Pakistan",
+          avatar: "H",
+          skills: [
+            "Strategic Account Management",
+            "Client Advocacy",
+            "Success Planning",
+          ],
+          education: "N/A",
+          description:
+            "Primary strategic link between ZA Solutions and valued clients. Focuses on building deep, long-term partnerships, strategic relationship cultivation, and ensuring client objectives are exceeded through dedicated account management.",
+          socials: [{ icon: "email", link: "mailto:hadiakhan@zasolutions.co" }],
+        },
+        hanan: {
+          name: "Hanan Rashid",
+          role: "Client Liaison Officer",
+          location: "Australia",
+          avatar: "H",
+          skills: [
+            "Time Zone Coordination",
+            "Project Communication",
+            "Client Relations",
+          ],
+          education: "N/A",
+          description:
+            "Critical link ensuring seamless communication across time zones. Provides dedicated support during extended hours, bridging gaps between clients and operations with transparent project oversight.",
+          socials: [
+            { icon: "email", link: "mailto:hananrashid@zasolutions.co" },
+            {
+              icon: "linkedin",
+              link: "https://www.linkedin.com/in/hanan-rashid-a28b5075/",
+            },
+          ],
+        },
+      };
+
+      function openTeamModal(memberId) {
+        const member = teamData[memberId];
+        console.log(member);
+        if (!member) return;
+
+        document.getElementById("modalName").textContent = member.name;
+        document.getElementById("modalRole").textContent = member.role;
+        document.getElementById("modalLocation").textContent = member.location;
+        document.getElementById("modalAvatar").textContent = member.avatar;
+        // document.getElementById("modalEducation").textContent =
+        //   member.education || "N/A";
+        document.getElementById("modalDescription").textContent =
+          member.description;
+
+        // Skills
+        // const skillsHTML = member.skills
+        //   .map((skill) => `<span class="skill-chip">${skill}</span>`)
+        //   .join("");
+        // document.getElementById("modalSkills").innerHTML = skillsHTML;
+
+        // Socials with proper icons
+        const iconSVGs = {
+          email:
+            '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>',
+          linkedin:
+            '<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>',
+          upwork:
+            '<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg>',
+        };
+
+        const socialsHTML = member.socials
+          .map(
+            (social) =>
+              `<a href="${
+                social.link
+              }" target="_blank" class="social-icon-modal">${
+                iconSVGs[social.icon]
+              }</a>`
+          )
+          .join("");
+        document.getElementById("modalSocials").innerHTML = socialsHTML;
+
+        document.getElementById("teamModal").classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeTeamModal() {
+        document.getElementById("teamModal").classList.add("hidden");
+        document.body.style.overflow = "auto";
       }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
