@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Disallow access to admin/private folders (if you have any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemap location
+Sitemap: https://www.zasolutions.com/sitemap.xml

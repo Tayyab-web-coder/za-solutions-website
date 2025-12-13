@@ -1,0 +1,17 @@
+# Enable Rewrite Engine
+RewriteEngine On
+RewriteBase /za-solutions/
+
+# Remove .php extension from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# Redirect .php URLs to clean URLs (301 permanent redirect for SEO)
+RewriteCond %{THE_REQUEST} ^GET\ /[^?\s]+\.php
+RewriteRule ^(.*)\.php$ /$1 [R=301,L]
+
+# Force HTTPS - DISABLED FOR LOCALHOST
+# Uncomment these lines when you deploy to production
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
